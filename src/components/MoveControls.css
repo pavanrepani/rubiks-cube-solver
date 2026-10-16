@@ -1,0 +1,59 @@
+.move-controls {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #343640;
+    border-radius: 14px;
+    background: #191a20;
+    color: #f5f5f7;
+  }
+  
+  .move-controls-heading h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+  }
+  
+  .move-controls-heading p {
+    margin: 0 0 16px;
+    color: #a5a6b2;
+    font-size: 13px;
+  }
+  
+  .move-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .move-button,
+  .secondary-move-button {
+    padding: 10px 14px;
+    border: 1px solid #454753;
+    border-radius: 8px;
+    background: #292b35;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  
+  .move-button:hover:not(:disabled),
+  .secondary-move-button:hover:not(:disabled) {
+    background: #414455;
+  }
+  
+  .move-button:disabled,
+  .secondary-move-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+  
+  .move-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  
+  .secondary-move-button {
+    flex: 1;
+  }

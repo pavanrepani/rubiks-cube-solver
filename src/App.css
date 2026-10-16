@@ -1,0 +1,361 @@
+
+.app {
+  max-width: 1120px;
+  margin: auto;
+  padding: 24px;
+}
+
+.navbar, .panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.navbar h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #7c6cff;
+}
+
+.status, .tag {
+  color: #a9a9b5;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 0 36px;
+}
+
+.eyebrow {
+  color: #a497ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.hero h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  margin: 12px 0;
+  letter-spacing: -2px;
+}
+
+.subtitle, .description {
+  color: #a9a9b5;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+}
+
+.panel {
+  background: #191a20;
+  border: 1px solid #2b2c35;
+  border-radius: 18px;
+  padding: 24px;
+  min-width: 0;
+}
+
+.panel h3 {
+  margin: 8px 0;
+}
+
+.cube-placeholder {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cube-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 65px);
+  gap: 5px;
+  padding: 7px;
+  background: #08090c;
+  border-radius: 8px;
+}
+
+.cube-sticker {
+  height: 65px;
+  border: 2px solid #17181d;
+  border-radius: 5px;
+}
+
+.cube-placeholder p {
+  color: #888995;
+  font-size: 12px;
+}
+
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 14px;
+}
+
+.color-option {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #33343d;
+  border-radius: 50%;
+}
+
+.color-option.selected {
+  outline: 2px solid #a497ff;
+  outline-offset: 3px;
+}
+
+.selected-label {
+  color: #aaaab5;
+  font-size: 13px;
+}
+
+.divider {
+  height: 1px;
+  background: #30313a;
+  margin: 28px 0;
+}
+
+.primary-button, .secondary-button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.primary-button {
+  color: white;
+  background: #7565f5;
+  border: none;
+}
+
+.primary-button:hover {
+  background: #897cff;
+}
+
+.secondary-button {
+  color: #e6e6eb;
+  background: transparent;
+  border: 1px solid #383943;
+}
+
+footer {
+  color: #777985;
+  font-size: 12px;
+  text-align: center;
+  padding: 32px 0 10px;
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 16px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 38px 0 28px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}
+
+.face-selector {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.face-tab {
+  min-width: 38px;
+  padding: 9px;
+  color: #dedee8;
+  background: #252630;
+  border: 1px solid #383943;
+  border-radius: 8px;
+}
+
+.face-tab.active {
+  background: #7565f5;
+  border-color: #a497ff;
+  color: white;
+}
+
+.active-face {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  color: #a9a9b5;
+  font-size: 11px;
+}
+
+.cube-net {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    ". U . ."
+    "L F R B"
+    ". D . .";
+  gap: 8px;
+  justify-items: center;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.face {
+  width: 100%;
+  max-width: 110px;
+  min-width: 0;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.face-U { grid-area: U; }
+.face-R { grid-area: R; }
+.face-F { grid-area: F; }
+.face-D { grid-area: D; }
+.face-L { grid-area: L; }
+.face-B { grid-area: B; }
+
+.face-active {
+  border-color: #a497ff;
+  background: #252330;
+}
+
+.face-label {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: #c6c4d5;
+  margin-bottom: 5px;
+}
+
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.cube-sticker {
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  min-width: 0;
+  border: 1px solid #15161b;
+  border-radius: 3px;
+  transition: filter 120ms ease;
+}
+
+.cube-sticker:hover {
+  filter: brightness(1.18);
+}
+
+.cube-status {
+  color: #aaaab5;
+  font-size: 12px;
+  text-align: center;
+  margin: 18px 0;
+}
+
+@media (max-width: 420px) {
+  .cube-net {
+    gap: 3px;
+  }
+
+  .face {
+    padding: 3px;
+  }
+
+  .sticker-grid {
+    gap: 2px;
+  }
+
+  .active-face {
+    flex-direction: column;
+  }
+}
+
+.validation-panel {
+  margin: 18px 0;
+  padding: 14px;
+  border: 1px solid #383943;
+  border-radius: 10px;
+  background: #202129;
+}
+
+.validation-panel h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.validation-panel p,
+.validation-panel li {
+  color: #b9b9c6;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.validation-panel ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.cube-3d-section {
+  margin: 18px 0;
+  overflow: hidden;
+  border: 1px solid #30313a;
+  border-radius: 12px;
+}
+
+.section-caption {
+  padding: 12px 14px 0;
+  color: #a497ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.cube-canvas {
+  height: 340px;
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.cube-canvas:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 480px) {
+  .cube-canvas {
+    height: 270px;
+  }
+}
